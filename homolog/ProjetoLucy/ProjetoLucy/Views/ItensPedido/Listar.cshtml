@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ProjetoLucy.Domain.Entities.ItensPedido>
+
+@{
+    ViewBag.Title = "Listar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista de intes do produto</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Index")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Pedido.Forma_pg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Produto.Descricao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pedido.Forma_pg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Produto.Descricao)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ItensPedidoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ItensPedidoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ItensPedidoId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,15 @@
+G:\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Application\bin\Debug\ProjetoLucy.Application.dll
+G:\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Application\bin\Debug\ProjetoLucy.Application.pdb
+G:\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Application\obj\Debug\ProjetoLucy.Application.csprojResolveAssemblyReference.cache
+G:\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Application\obj\Debug\ProjetoLucy.Application.dll
+G:\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Application\obj\Debug\ProjetoLucy.Application.pdb
+C:\Users\bueno\Desktop\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Application\bin\Debug\ProjetoLucy.Application.dll
+C:\Users\bueno\Desktop\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Application\bin\Debug\ProjetoLucy.Application.pdb
+C:\Users\bueno\Desktop\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Application\obj\Debug\ProjetoLucy.Application.csprojResolveAssemblyReference.cache
+C:\Users\bueno\Desktop\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Application\obj\Debug\ProjetoLucy.Application.dll
+C:\Users\bueno\Desktop\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Application\obj\Debug\ProjetoLucy.Application.pdb
+C:\Projetos\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Application\bin\Debug\ProjetoLucy.Application.dll
+C:\Projetos\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Application\bin\Debug\ProjetoLucy.Application.pdb
+C:\Projetos\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Application\obj\Debug\ProjetoLucy.Application.csprojResolveAssemblyReference.cache
+C:\Projetos\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Application\obj\Debug\ProjetoLucy.Application.dll
+C:\Projetos\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Application\obj\Debug\ProjetoLucy.Application.pdb
