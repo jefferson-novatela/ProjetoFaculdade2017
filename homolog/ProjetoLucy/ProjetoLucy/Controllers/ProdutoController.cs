@@ -22,26 +22,32 @@ namespace ProjetoLucy.Controllers
 
         // GET: Produto
         public ActionResult Produto()
-        {
-            return View(new Produto());
+        {			
+			var lista = _produtoSevices.GetAll();
+			 	
+			ViewBag.lista = lista;
+			return View(new Produto());
         }
+		
 
-        [HttpPost]
+		[HttpPost]
         public ActionResult Produto(Produto obj)
         {
-
+			
             if(obj.ProdutoId > 0)
             {
                _produtoSevices.Update(obj);
             }
 			else
             {
+				obj.CodProduto = obj.GerarCodigoProduto();
                 _produtoSevices.Add(obj);
-
-				return RedirectToAction("Listar");
+				//return RedirectToAction("Produto");
             }
+			var lista = _produtoSevices.GetAll();
 
-            return View();
+			ViewBag.lista = lista;
+			return RedirectToAction("Produto");
         }
 
 		public ActionResult Listar()
@@ -50,5 +56,7 @@ namespace ProjetoLucy.Controllers
 
 			return View(lista);
 		}
-    }
+
+		
+	}
 }

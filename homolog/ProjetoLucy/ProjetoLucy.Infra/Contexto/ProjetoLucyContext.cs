@@ -45,7 +45,7 @@ namespace ProjetoLucy.Infra.Contexto
                 .Configure(p => p.HasColumnType("varchar"));
 
             modelBuilder.Properties<string>()
-                .Configure(p => p.HasMaxLength(45));
+                .Configure(p => p.HasMaxLength(100));
 
             base.OnModelCreating(modelBuilder);
         }

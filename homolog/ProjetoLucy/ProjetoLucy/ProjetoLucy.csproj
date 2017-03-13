@@ -198,6 +198,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\ScriptFormularios\Produto\Controle\Produto.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -221,6 +222,7 @@
     <Content Include="Views\ItensPedido\Listar.cshtml" />
     <Content Include="Views\Produto\Produto.cshtml" />
     <Content Include="Views\Produto\Listar.cshtml" />
+    <Content Include="Views\Pedido\Listar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

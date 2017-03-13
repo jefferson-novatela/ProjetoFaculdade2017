@@ -36,7 +36,7 @@ namespace ProjetoLucy.Controllers
 			{
 				_itensPedidoServices.Add(obj);
 			}
-			return View();
+			return View("Listar");
 		}
 
 		public ActionResult Listar(ItensPedido obj)
@@ -44,6 +44,13 @@ namespace ProjetoLucy.Controllers
 			var lista = _itensPedidoServices.GetAll();
 
 			return View(lista);
+		}
+
+		public ActionResult Editar(int itens)
+		{
+			var ed = _itensPedidoServices.GetById(itens);
+
+			return View(ed);
 		}
 
 

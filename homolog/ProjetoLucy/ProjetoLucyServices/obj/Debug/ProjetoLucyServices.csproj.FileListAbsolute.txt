@@ -20,3 +20,14 @@ C:\Projetos\Projeto_Facudade\ProjetoLucy\ProjetoLucyServices\bin\Debug\EntityFra
 C:\Projetos\Projeto_Facudade\ProjetoLucy\ProjetoLucyServices\obj\Debug\ProjetoLucyServices.csprojResolveAssemblyReference.cache
 C:\Projetos\Projeto_Facudade\ProjetoLucy\ProjetoLucyServices\obj\Debug\ProjetoLucyServices.dll
 C:\Projetos\Projeto_Facudade\ProjetoLucy\ProjetoLucyServices\obj\Debug\ProjetoLucyServices.pdb
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucyServices\bin\Debug\ProjetoLucyServices.dll
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucyServices\bin\Debug\ProjetoLucyServices.pdb
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucyServices\bin\Debug\ProjetoLucy.Domain.dll
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucyServices\bin\Debug\ProjetoLucy.Infra.dll
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucyServices\bin\Debug\EntityFramework.dll
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucyServices\bin\Debug\ProjetoLucy.Domain.pdb
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucyServices\bin\Debug\ProjetoLucy.Infra.pdb
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucyServices\bin\Debug\EntityFramework.xml
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucyServices\obj\Debug\ProjetoLucyServices.csprojResolveAssemblyReference.cache
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucyServices\obj\Debug\ProjetoLucyServices.dll
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucyServices\obj\Debug\ProjetoLucyServices.pdb

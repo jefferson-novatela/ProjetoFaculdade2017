@@ -11,7 +11,12 @@ namespace ProjetoLucy.Controllers
     public class PedidoController : Controller
     {
 		protected PedidoRepository _pedidoRepository;
+		private readonly List<SelectListItem> _formPag = new List<SelectListItem> {
 
+			new SelectListItem { Text = "Dinheiro" , Value = "Dinheiro"},
+			new SelectListItem { Text = "Crédito" , Value = "Credito"}
+
+		};
 		public PedidoController()
 		{
 			_pedidoRepository = new PedidoRepository();
@@ -19,20 +24,26 @@ namespace ProjetoLucy.Controllers
 		// GET: Pedido
 		public ActionResult Pedido()
         {
-            return View();
+			var lista = _pedidoRepository.GetAll();
+			ViewBag.Pedido = lista;
+
+			return View(new Pedido());
         }
 
 		[HttpPost]
 		public ActionResult Pedido(Pedido obj)
 		{
 			if (obj.PedidoId > 0)
-			{
-				_pedidoRepository.Add(obj);
+			{				
+				_pedidoRepository.Update(obj);
 			}
 			else
 			{
-				_pedidoRepository.Update(obj);
+				_pedidoRepository.Add(obj);
 			}
+
+			var lista = _pedidoRepository.GetAll();
+			ViewBag.Pedido = lista;
 			return View("Listar");
 		}
 

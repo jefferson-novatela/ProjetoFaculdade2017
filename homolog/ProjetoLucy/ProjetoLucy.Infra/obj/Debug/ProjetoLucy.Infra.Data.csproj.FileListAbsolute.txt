@@ -46,3 +46,15 @@ C:\Projetos\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Infra\bin\Debug\EntityFrame
 C:\Projetos\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Infra\obj\Debug\ProjetoLucy.Infra.Data.csprojResolveAssemblyReference.cache
 C:\Projetos\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Infra\obj\Debug\ProjetoLucy.Infra.dll
 C:\Projetos\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Infra\obj\Debug\ProjetoLucy.Infra.pdb
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucy.Infra\bin\Debug\ProjetoLucy.Infra.dll.config
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucy.Infra\bin\Debug\ProjetoLucy.Infra.dll
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucy.Infra\bin\Debug\ProjetoLucy.Infra.pdb
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucy.Infra\bin\Debug\EntityFramework.dll
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucy.Infra\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucy.Infra\bin\Debug\ProjetoLucy.Domain.dll
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucy.Infra\bin\Debug\ProjetoLucy.Domain.pdb
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucy.Infra\bin\Debug\EntityFramework.xml
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucy.Infra\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucy.Infra\obj\Debug\ProjetoLucy.Infra.Data.csprojResolveAssemblyReference.cache
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucy.Infra\obj\Debug\ProjetoLucy.Infra.dll
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucy.Infra\obj\Debug\ProjetoLucy.Infra.pdb

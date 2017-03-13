@@ -1,52 +1,106 @@
 ﻿@model ProjetoLucy.Domain.Entities.Produto
 
 @{
-    ViewBag.Title = "Produto";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "Produto";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Produto</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Produto</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.Descricao, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Descricao, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
-            </div>
-        </div>
+	@Html.AntiForgeryToken()
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Valor, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Valor, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Valor, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Total, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Total, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Total, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
+	<div class="form-horizontal">
+		<h4>Produto</h4>
+		<hr />
+		@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+		<div class="form-group">
+			<div class="row">
+				<div class="col-md-5">
+					@Html.LabelFor(model => model.CodProduto, htmlAttributes: new { @class = "control-label col-md-5" })<br /><br />
+					@Html.EditorFor(model => model.CodProduto, new { htmlAttributes = new { @class = "form-control" , @disabled = "disabled"} })
+					@Html.ValidationMessageFor(model => model.CodProduto, "", new { @class = "text-danger" })
+				</div>
+				<div class="col-md-4">
+					@Html.LabelFor(model => model.Descricao, htmlAttributes: new { @class = "control-label col-md-2" })<br /><br />
+					@Html.EditorFor(model => model.Descricao, new { htmlAttributes = new { @class = "form-control" } })
+					@Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
+				</div>
+				@*<div class="col-md-3">
+					@Html.LabelFor(model => model.Valor, htmlAttributes: new { @class = "control-label col-md-2" })<br /><br />
+					@Html.EditorFor(model => model.Valor, new { htmlAttributes = new { @class = "form-control" } })
+					@Html.ValidationMessageFor(model => model.Valor, "", new { @class = "text-danger" })
+				</div>*@
+			</div>
+			<div class="row">
+				<div class="col-md-5">
+					@Html.LabelFor(model => model.VlrProduto, htmlAttributes: new { @class = "control-label col-md-4" })<br /><br />
+					@Html.EditorFor(model => model.VlrProduto, new { htmlAttributes = new { @class = "form-control" } })
+					@Html.ValidationMessageFor(model => model.VlrProduto, "", new { @class = "text-danger" })
+				</div>
+				<div class="col-md-6">
+					@Html.LabelFor(model => model.Quantidade, htmlAttributes: new { @class = "control-label col-md-4" })<br /><br />
+					@Html.EditorFor(model => model.Quantidade, new { htmlAttributes = new { @class = "form-control" } })
+					@Html.ValidationMessageFor(model => model.Quantidade, "", new { @class = "text-danger" })
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-md-offset-10 col-md-10">
+				<input type="submit" value="Salvar" class="btn btn-success" />
+			</div>
+		</div>
+	</div>
 }
+<br />
+<hr />
+<br />
+<!--Lista de Produtos inserido-->
+<table class="table">
+	<tr>
+		<th>
+			@Html.DisplayNameFor(model => model.CodProduto)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Descricao)
+		</th>		
+		<th>
+			@Html.DisplayNameFor(model => model.VlrProduto)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Quantidade)
+		</th>
+		<th></th>
+	</tr>
 
+	@foreach (var item in ViewBag.lista)
+	{
+		<tr>
+			<td>
+				@item.CodProduto
+			</td>
+			<td>
+				@item.Descricao
+			</td>
+			@*<td>
+				@item.Valor
+			</td>*@
+			<td>
+				@item.VlrProduto
+			</td>
+			<td>
+				@item.Quantidade
+			</td>
+			<td>
+				@Html.ActionLink("Edit", "Edit", new { id = item.ProdutoId }) |
+				@Html.ActionLink("Details", "Details", new { id = item.ProdutoId }) |
+				@Html.ActionLink("Delete", "Delete", new { id = item.ProdutoId })
+			</td>
+		</tr>
+	}
+
+</table>
 <div>
-    @Html.ActionLink("Voltar a lista", "Listar")
+	@Html.ActionLink("Voltar a lista", "Listar", new { @style  = "color:black" , @class = "btn btn-primary" })
+	
 </div>

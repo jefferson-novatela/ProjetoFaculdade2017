@@ -13,3 +13,8 @@ C:\Projetos\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Application\bin\Debug\Proje
 C:\Projetos\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Application\obj\Debug\ProjetoLucy.Application.csprojResolveAssemblyReference.cache
 C:\Projetos\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Application\obj\Debug\ProjetoLucy.Application.dll
 C:\Projetos\Projeto_Facudade\ProjetoLucy\ProjetoLucy.Application\obj\Debug\ProjetoLucy.Application.pdb
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucy.Application\bin\Debug\ProjetoLucy.Application.dll
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucy.Application\bin\Debug\ProjetoLucy.Application.pdb
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucy.Application\obj\Debug\ProjetoLucy.Application.csprojResolveAssemblyReference.cache
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucy.Application\obj\Debug\ProjetoLucy.Application.dll
+C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucy.Application\obj\Debug\ProjetoLucy.Application.pdb

@@ -12,11 +12,33 @@ namespace ProjetoLucy.Domain.Entities
     public class Produto
     {      
         public int ProdutoId { get; set; }
-        [Display(Name = "Descrição")]
-        public string Descricao { get; set; }
+		[Display(Name = "Código do Produto")]		
+		public string CodProduto { get; set; }
+		[Display(Name = "Descrição")]
+		[Required(ErrorMessage = "Descrição do Produto Obrigatoria!")]
+		public string Descricao { get; set; }
         [Display(Name = "Valor")]
         public decimal Valor { get; set; }
-        [Display(Name = "Total")]
-        public double Total { get; set; }
-    }
+        [Display(Name = "Valor Produto")]
+		[Required(ErrorMessage = "Valor Produto Obrigatorio!")]
+		public double VlrProduto { get; set; }
+		[Display(Name = "Quantidade Estoque")]
+		public double Quantidade { get; set; }
+
+		public string GerarCodigoProduto()
+		{
+			string guild = Guid.NewGuid().ToString().Replace("-", "");
+			Random random = new Random();
+			const byte tamanhoCodigo = 8;
+
+			string codProduto = "";
+
+			for (int i = 0; i < tamanhoCodigo; i++)
+			{
+				codProduto += guild.ElementAt(random.Next(1, 9));
+			}
+
+			return codProduto;
+		}
+	}
 }
