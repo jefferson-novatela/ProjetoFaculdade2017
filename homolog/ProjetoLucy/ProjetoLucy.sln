@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Presentation", "0.Presentation", "{C34A83C4-1FA8-4CB1-8FA7-1475AA232ECE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Services", "1.Services", "{D833C39F-01D7-44D7-BAD0-22998027E1EF}"
+	ProjectSection(SolutionItems) = preProject
+		ProjetoLucy\packages.config = ProjetoLucy\packages.config
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Application", "2.Application", "{11C6D80A-79D1-45E7-968A-D6C377A91021}"
 EndProject

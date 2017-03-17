@@ -41,11 +41,9 @@ namespace ProjetoLucy.Controllers
 			else
             {
 				obj.CodProduto = obj.GerarCodigoProduto();
-                _produtoSevices.Add(obj);
-				//return RedirectToAction("Produto");
+                _produtoSevices.Add(obj);				
             }
 			var lista = _produtoSevices.GetAll();
-
 			ViewBag.lista = lista;
 			return RedirectToAction("Produto");
         }
