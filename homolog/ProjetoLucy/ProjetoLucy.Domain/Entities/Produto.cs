@@ -24,6 +24,7 @@ namespace ProjetoLucy.Domain.Entities
 		public double VlrProduto { get; set; }
 		[Display(Name = "Quantidade Estoque")]
 		public double Quantidade { get; set; }
+		public bool RemoveProduto { get; set; }
 
 		public string GerarCodigoProduto()
 		{

@@ -16,6 +16,7 @@
 		@Html.ValidationSummary(true, "", new { @class = "text-danger" })
 		<div class="form-group">
 			<input type="text" hidden="hidden" value="@Model.ProdutoId" name="ProdutoId" />
+			<input type="text" hidden="hidden" value="@Model.CodProduto" name="CodProduto" />
 			<div class="row">
 				@*<div class="col-md-5">
 					@Html.LabelFor(model => model.CodProduto, htmlAttributes: new { @class = "control-label col-md-5" })<br /><br />
@@ -95,7 +96,7 @@
 			<td>
 				@Html.ActionLink("Edit", "Produto", new { id = item.ProdutoId }) |
 				@*@Html.ActionLink("Details", "Details", new { id = item.ProdutoId }) |*@
-				@Html.ActionLink("Delete", "Delete", new { id = item.ProdutoId })
+				@Html.ActionLink("Delete", "RemoverProduto", new { id = item.ProdutoId })
 			</td>
 		</tr>
 	}

@@ -23,7 +23,7 @@ namespace ProjetoLucy.Controllers
         // GET: Produto
         public ActionResult Produto(int id = 0)
         {			
-			var lista = _produtoSevices.GetAll();
+			var lista = _produtoSevices.GetAll().Where(s => s.RemoveProduto != true);
 			ViewBag.lista = lista;
 			if (id > 0)
 			{
@@ -59,10 +59,12 @@ namespace ProjetoLucy.Controllers
 			return View(lista);
 		}
 
-		public ActionResult Editar(int id)
+		public ActionResult RemoverProduto(int id)
 		{
-			var editar = _produtoSevices.GetById(id);
-			return View();
+			var produto = _produtoSevices.GetById(id);
+			produto.RemoveProduto = !produto.RemoveProduto;
+			_produtoSevices.Update(produto);
+			return RedirectToAction("Produto");
 		}
 		
 	}
