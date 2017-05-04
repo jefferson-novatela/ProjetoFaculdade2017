@@ -43,7 +43,7 @@ namespace ProjetoLucy.Controllers
                _produtoSevices.Update(obj);
             }
 			else
-            {
+            {				
 				obj.CodProduto = obj.GerarCodigoProduto();
                 _produtoSevices.Add(obj);				
             }
@@ -54,7 +54,7 @@ namespace ProjetoLucy.Controllers
 
 		public ActionResult Listar()
 		{
-		   var lista =	_produtoSevices.GetAll();
+		   var lista =	_produtoSevices.GetAll().Where(s => s.RemoveProduto != true);
 
 			return View(lista);
 		}
@@ -65,6 +65,21 @@ namespace ProjetoLucy.Controllers
 			produto.RemoveProduto = !produto.RemoveProduto;
 			_produtoSevices.Update(produto);
 			return RedirectToAction("Produto");
+		}
+
+		public ActionResult RemoverProdutosLista(int id)
+		{
+			var produto = _produtoSevices.GetById(id);
+			produto.RemoveProduto = !produto.RemoveProduto;
+			_produtoSevices.Update(produto);
+			return RedirectToAction("Listar");
+		}
+
+		public ActionResult Editar(int id)
+		{
+			var editar = _produtoSevices.GetById(id);
+
+			return View();
 		}
 		
 	}

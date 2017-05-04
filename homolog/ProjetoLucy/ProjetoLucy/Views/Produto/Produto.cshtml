@@ -11,28 +11,18 @@
 	@Html.AntiForgeryToken()
 
 	<div class="form-horizontal">
-		<h4>Produto</h4>
+		<h4 style="color:deepskyblue">Cadastra novo Produto</h4>
 		<hr />
 		@Html.ValidationSummary(true, "", new { @class = "text-danger" })
 		<div class="form-group">
 			<input type="text" hidden="hidden" value="@Model.ProdutoId" name="ProdutoId" />
 			<input type="text" hidden="hidden" value="@Model.CodProduto" name="CodProduto" />
-			<div class="row">
-				@*<div class="col-md-5">
-					@Html.LabelFor(model => model.CodProduto, htmlAttributes: new { @class = "control-label col-md-5" })<br /><br />
-					@Html.EditorFor(model => model.CodProduto, new { htmlAttributes = new { @class = "form-control"} })
-					@Html.ValidationMessageFor(model => model.CodProduto, "", new { @class = "text-danger" })
-				</div>*@
+			<div class="row">			
 				<div class="col-md-4">
 					@Html.LabelFor(model => model.Descricao, htmlAttributes: new { @class = "control-label col-md-2" })<br /><br />
 					@Html.EditorFor(model => model.Descricao, new { htmlAttributes = new { @class = "form-control" } })
 					@Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
 				</div>
-				@*<div class="col-md-3">
-					@Html.LabelFor(model => model.Valor, htmlAttributes: new { @class = "control-label col-md-2" })<br /><br />
-					@Html.EditorFor(model => model.Valor, new { htmlAttributes = new { @class = "form-control" } })
-					@Html.ValidationMessageFor(model => model.Valor, "", new { @class = "text-danger" })
-				</div>*@
 			</div>
 			<div class="row">
 				<div class="col-md-5">
@@ -58,14 +48,14 @@
 <hr />
 <br />
 <!--Lista de Produtos inserido-->
-<table class="table">
+@*<table class="table">
 	<tr>
 		<th>
 			@Html.DisplayNameFor(model => model.CodProduto)
 		</th>
 		<th>
 			@Html.DisplayNameFor(model => model.Descricao)
-		</th>		
+		</th>
 		<th>
 			@Html.DisplayNameFor(model => model.VlrProduto)
 		</th>
@@ -84,9 +74,6 @@
 			<td>
 				@item.Descricao
 			</td>
-			@*<td>
-				@item.Valor
-			</td>*@
 			<td>
 				@item.VlrProduto
 			</td>
@@ -95,14 +82,13 @@
 			</td>
 			<td>
 				@Html.ActionLink("Edit", "Produto", new { id = item.ProdutoId }) |
-				@*@Html.ActionLink("Details", "Details", new { id = item.ProdutoId }) |*@
 				@Html.ActionLink("Delete", "RemoverProduto", new { id = item.ProdutoId })
 			</td>
 		</tr>
 	}
 
-</table>
+</table>*@
 <div>
-	@Html.ActionLink("Voltar a lista", "Listar", new { @style  = "color:black" , @class = "btn btn-primary" })
-	
+	@Html.ActionLink("Voltar a lista", "Listar", new { @style = "color:black", @class = "btn btn-primary" })
+
 </div>
