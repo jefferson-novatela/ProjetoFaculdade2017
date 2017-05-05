@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoLucy.Domain.Entities
 {
-    [Table("ProjetoLucy_ItensPedido")]
+    [Table("ProjetoRay_ItensPedido")]
     public class ItensPedido
     {
         public int ItensPedidoId { get; set; }

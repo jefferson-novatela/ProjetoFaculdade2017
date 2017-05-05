@@ -12,18 +12,16 @@ using System.Web.UI.WebControls;
 namespace ProjetoLucy.Controllers
 {
     public class GerencialController : Controller
-    {
-		protected UsuarioRepository _usuarioRepository;
+    {		
 		protected UsuarioServices _usuarioServices;
 		public GerencialController()
 		{
-			_usuarioRepository = new UsuarioRepository();
+			
 			_usuarioServices = new UsuarioServices();
 		}
         // GET: Gerencial
         public ActionResult Login()
         {
-
             return View();
         }
 
@@ -32,15 +30,23 @@ namespace ProjetoLucy.Controllers
 		{
 			if (ModelState.IsValid)
 			{
+				usr = _usuarioServices.GetUsuario(usr);
+
 				if (usr != null)
 				{
+					if (usr.Removido)
+					{
+						ModelState.AddModelError("UserNotFound", "Usuário bloqueado.");
+						return View();
+					}
+
 					CriarCookie(usr);
 					_usuarioServices.Dispose();
 					return RedirectToAction("Index", "Home", new { Controller = "Gerencial" });
 				}
 			}
 
-			
+			ModelState.AddModelError("UserNotFound", "Usuario não encontrado!");
 			return View();
 		}
 
@@ -59,6 +65,25 @@ namespace ProjetoLucy.Controllers
 			Response.Cookies.Add(cookie);
 		}
 
+		[HttpPost]
+		public ActionResult Cadastrar(Usuario cadastro)
+		{
+			if (_usuarioServices.UsuarioExistente(cadastro.Email))
+			{
+				ModelState.AddModelError("UserNotFound", "Este endereço de e-mail já está cadastrado no sistema.");
+				return View("Login", cadastro);
+			}
+
+			if (cadastro.Senha != cadastro.ConfirmaSenha)
+			{
+				ModelState.AddModelError("UserNotFound", "As senhas são diferentes por favor digite as senhas iguais!");
+			}
+			else
+			{
+				_usuarioServices.Add(cadastro);
+			}		
+			return RedirectToAction("Login");
+		}
 
 		public ActionResult Logout()
 		{

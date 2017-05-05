@@ -34,8 +34,8 @@
                 <a class="hiddenanchor" id="toregister"></a>
                 <a class="hiddenanchor" id="tologin"></a>
                 <div id="wrapper">
-                    <div id="login" class="animate form" method="post" action="">
-                        <form action="mysuperscript.php" autocomplete="on">
+                    <div id="login" class="animate form Login"  >
+                        <form action="" method="post" autocomplete="on">
                             <h1>Entrar</h1>
                             <p>
                                 <label for="username" class="uname"> Seu e-mail </label>
@@ -52,14 +52,25 @@
                             <p class="login button">
                                 <input type="submit" value="Login" />
                             </p>
+							@if (!ViewData.ModelState.IsValid)
+							{
+								<p class="ui negative message" name="exit" style="height: 11%;">
+									<small class="header">
+										@Html.ValidationMessage("UserNotFound", new { @class = "red", @style = "color:red;" })
+									</small>
+									<small>Confime os dados, e-mail e sua senha.</small>
+								</p>
+							}
                             <p class="change_link">
                                 Ainda não é membro ?
                                 <a href="#toregister" class="to_register">Cadastrar</a>
                             </p>
+
                         </form>
+						
                     </div>
                     <div id="register" class="animate form">
-                        <form action="mysuperscript.php" autocomplete="on">
+                        <form action="Gerencial/Cadastrar" method="post" autocomplete="on">
                             <h1> Inscrever-se </h1>
                             <p>
                                 <label for="usernamesignup" class="uname">Seu Nome</label>

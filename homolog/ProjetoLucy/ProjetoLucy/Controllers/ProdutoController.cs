@@ -49,7 +49,7 @@ namespace ProjetoLucy.Controllers
             }
 			var lista = _produtoSevices.GetAll();
 			ViewBag.lista = lista;
-			return RedirectToAction("Produto");
+			return RedirectToAction("Listar");
         }
 
 		public ActionResult Listar()

@@ -88,7 +88,6 @@
 	}
 
 </table>*@
-<div>
-	@Html.ActionLink("Voltar a lista", "Listar", new { @style = "color:black", @class = "btn btn-primary" })
-
+<div>	
+	<a href="@Url.Action("Listar", "Produto")" class="btn btn-primary small" role="button" aria-pressed="true">Voltar a lista</a>
 </div>

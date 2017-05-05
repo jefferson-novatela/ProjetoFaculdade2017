@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoLucy.Domain.Entities
 {
-    [Table("ProjetoLucy_Usuario")]
+    [Table("ProjetoRay_Usuario")]
     public class Usuario
     {
         public int UsuarioId { get; set; }
@@ -27,6 +27,8 @@ namespace ProjetoLucy.Domain.Entities
 
         public int Senha { get; set; }
         public int ConfirmaSenha { get; set; }
-        public String Email { get; set; }
-    }
+        public string Email { get; set; }
+
+		public bool Removido { get; set; }
+	}
 }

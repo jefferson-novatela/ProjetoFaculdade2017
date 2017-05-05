@@ -11,5 +11,15 @@ namespace ProjetoLucy.Infra.Repository
 	public class UsuarioRepository : RepositoryBase<Usuario>
 	{
 
+		public Usuario GetUsuario(Usuario usr)
+		{
+			return Db.Usuarios.FirstOrDefault(s => s.Email == usr.Email && s.Senha == usr.Senha);
+		}
+
+		public bool UsuarioExistente(string email)
+		{
+			var usuario = Db.Usuarios.FirstOrDefault(u => u.Email == email && !u.Removido);
+			return usuario != null;
+		}
 	}
 }
