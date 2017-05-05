@@ -10,7 +10,7 @@ namespace ProjetoLucy.Controllers
 	public class Cookies
 	{
 		private const string Prefix = "423FF9D4-A252-4388-91E9-31D3BD1F37DE_";
-		private static readonly TimeSpan CookieDuracao = TimeSpan.FromHours(1);
+		private static readonly TimeSpan CookieDuracao = TimeSpan.FromHours(2);
 
 		public static void SetCookie(string key, string value)
 		{

@@ -9,7 +9,9 @@ namespace ProjetoLucy
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+						"~/Scripts/jquery-3.1.1.min.js")
+						.Include("~/Scripts/jquery.validate*")
+						.Include("~/Scripts/jquery.mask.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -26,6 +28,15 @@ namespace ProjetoLucy
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+
+			bundles.Add(new StyleBundle("~/bundle/jquery").Include());
+
+			bundles.Add(new StyleBundle("~/bundles/Scripts/ControleProduto").Include(
+					"~/Scripts/ScriptFormularios/Produto/Controle/Produto.js"
+				));
+
+			BundleTable.EnableOptimizations = true;
         }
     }
 }

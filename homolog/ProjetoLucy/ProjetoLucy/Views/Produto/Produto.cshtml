@@ -18,22 +18,27 @@
 			<input type="text" hidden="hidden" value="@Model.ProdutoId" name="ProdutoId" />
 			<input type="text" hidden="hidden" value="@Model.CodProduto" name="CodProduto" />
 			<div class="row">			
-				<div class="col-md-4">
+				<div class="col-md-5">
 					@Html.LabelFor(model => model.Descricao, htmlAttributes: new { @class = "control-label col-md-2" })<br /><br />
 					@Html.EditorFor(model => model.Descricao, new { htmlAttributes = new { @class = "form-control" } })
 					@Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-5">
+				<div class="col-md-4">
 					@Html.LabelFor(model => model.VlrProduto, htmlAttributes: new { @class = "control-label col-md-4" })<br /><br />
-					@Html.EditorFor(model => model.VlrProduto, new { htmlAttributes = new { @class = "form-control" } })
+					@Html.EditorFor(model => model.VlrProduto, new { htmlAttributes = new { @class = "form-control", @id = "VlrProduto" , @placeholder = "#.###,##"} })
 					@Html.ValidationMessageFor(model => model.VlrProduto, "", new { @class = "text-danger" })
 				</div>
 				<div class="col-md-6">
 					@Html.LabelFor(model => model.Quantidade, htmlAttributes: new { @class = "control-label col-md-4" })<br /><br />
-					@Html.EditorFor(model => model.Quantidade, new { htmlAttributes = new { @class = "form-control" } })
+					@Html.EditorFor(model => model.Quantidade, new { htmlAttributes = new { @class = "form-control", @id = "Quantidade" } })
 					@Html.ValidationMessageFor(model => model.Quantidade, "", new { @class = "text-danger" })
+				</div>
+				<div class="col-md-4">
+					@Html.LabelFor(model => model.Valor, htmlAttributes: new { @class = "control-label col-md-4" })<br /><br />
+					@Html.EditorFor(model => model.Valor, new { htmlAttributes = new { @class = "form-control", @id = "Valor" } })
+					@Html.ValidationMessageFor(model => model.Valor, "", new { @class = "text-danger" })
 				</div>
 			</div>
 		</div>
@@ -44,6 +49,10 @@
 		</div>
 	</div>
 }
+
+
+@Scripts.Render("~/bundles/Scripts/ControleProduto")
+@*@RenderSection("scripts", required: true)*@
 <br />
 <hr />
 <br />

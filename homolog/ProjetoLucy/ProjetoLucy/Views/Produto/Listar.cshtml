@@ -15,15 +15,15 @@
 		<tr>
 			<th>
 				@Html.DisplayNameFor(model => model.Descricao)
-			</th>
-			<th>
-				@Html.DisplayNameFor(model => model.Valor)
-			</th>
+			</th>			
 			<th>
 				@Html.DisplayNameFor(model => model.VlrProduto)
 			</th>
 			<th>
 				@Html.DisplayNameFor(model => model.Quantidade)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Valor)
 			</th>
 			<th></th>
 		</tr>
@@ -32,15 +32,15 @@
 			<tr>
 				<td>
 					@Html.DisplayFor(modelItem => item.Descricao)
-				</td>
-				<td>
-					@Html.DisplayFor(modelItem => item.Valor)
-				</td>
+				</td>				
 				<td>
 					@Html.DisplayFor(modelItem => item.VlrProduto)
 				</td>
 				<td>
 					@Html.DisplayFor(modelItem => item.Quantidade)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Valor)
 				</td>
 				<td>
 					@*@Html.ActionLink("Edit", "Editar", new { id=item.ProdutoId }) |*@
@@ -49,6 +49,11 @@
 				</td>
 			</tr>
 }
-
 	</table>
 </div>
+
+@*<div class="bs-example" data-example-id="responsive-embed-16by9-iframe-youtube">
+	<div class="embed-responsive embed-responsive-16by9">
+		<iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=gJywsAhfeRw"></iframe>
+	</div>
+</div>*@

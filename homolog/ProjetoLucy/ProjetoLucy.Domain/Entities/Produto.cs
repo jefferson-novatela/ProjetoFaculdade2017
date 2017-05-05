@@ -21,7 +21,7 @@ namespace ProjetoLucy.Domain.Entities
         public decimal Valor { get; set; }
         [Display(Name = "Valor Produto")]
 		[Required(ErrorMessage = "Valor Produto Obrigatorio!")]
-		public double VlrProduto { get; set; }
+		public string VlrProduto { get; set; }
 		[Display(Name = "Quantidade Estoque")]
 		public double Quantidade { get; set; }
 		public bool RemoveProduto { get; set; }

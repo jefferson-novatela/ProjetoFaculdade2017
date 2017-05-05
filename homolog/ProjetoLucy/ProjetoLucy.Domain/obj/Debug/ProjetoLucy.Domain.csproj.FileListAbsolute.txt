@@ -21,3 +21,4 @@ C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucy.Domain\bin\Debu
 C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucy.Domain\bin\Debug\ProjetoLucy.Domain.pdb
 C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucy.Domain\obj\Debug\ProjetoLucy.Domain.dll
 C:\Projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucy.Domain\obj\Debug\ProjetoLucy.Domain.pdb
+C:\projetos\ProjetoFaculdade2017\homolog\ProjetoLucy\ProjetoLucy.Domain\obj\Debug\ProjetoLucy.Domain.csprojResolveAssemblyReference.cache
