@@ -235,6 +235,7 @@
     <Content Include="Views\Produto\Produto.cshtml" />
     <Content Include="Views\Produto\Listar.cshtml" />
     <Content Include="Views\Pedido\Listar.cshtml" />
+    <Content Include="Views\Produto\ListarRemovidos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -13,7 +13,15 @@ namespace ProjetoLucy.Infra.Repository
 
 		public Usuario GetUsuario(Usuario usr)
 		{
-			return Db.Usuarios.FirstOrDefault(s => s.Email == usr.Email && s.Senha == usr.Senha);
+			try
+			{
+				return Db.Usuarios.FirstOrDefault(s => s.Email == usr.Email && s.Senha == usr.Senha);
+			}
+			catch (Exception e)
+			{
+				throw;
+			}
+			
 		}
 
 		public bool UsuarioExistente(string email)

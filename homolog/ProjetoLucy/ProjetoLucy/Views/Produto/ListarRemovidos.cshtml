@@ -1,0 +1,60 @@
+﻿@model IEnumerable<ProjetoLucy.Domain.Entities.Produto>
+
+@{
+    ViewBag.Title = "ListarRemovidos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Listar Produtos Removidos</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CodProduto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Valor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VlrProduto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RemoveProduto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodProduto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Valor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VlrProduto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RemoveProduto)
+        </td>
+        <td>          
+            @Html.ActionLink("Adicionar a lista", "RetornarLista", new { id=item.ProdutoId })
+        </td>
+    </tr>
+}
+
+</table>
