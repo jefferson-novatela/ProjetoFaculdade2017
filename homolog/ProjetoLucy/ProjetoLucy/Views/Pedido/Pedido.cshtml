@@ -20,9 +20,9 @@
 		<div class="form-group">
 			@Html.LabelFor(model => model.Forma_pg, htmlAttributes: new { @class = "control-label col-md-2" })		
 				<div class="col-md-10">
-					<input type="radio" value="1" name="Forma_pg" checked="@(Model.Forma_pg == "1")"/> Dinherio <br />
-					<input type="radio" value="2" name="Forma_pg" checked="@(Model.Forma_pg == "2")"/> Credito  <br />
-					<input type="radio" value="3" name="Forma_pg" checked="@(Model.Forma_pg == "3")"/> Debito   <br />
+					<input type="radio" value="Dinherio" name="Forma_pg" checked="@(Model.Forma_pg == "Dinherio")"/> Dinherio <br />
+					<input type="radio" value="Credito" name="Forma_pg" checked="@(Model.Forma_pg == "Credito")"/> Credito  <br />
+					<input type="radio" value="Debito" name="Forma_pg" checked="@(Model.Forma_pg == "Debito")"/> Debito   <br />
 				</div>					
 		</div>
 
@@ -35,11 +35,11 @@
 		</div>
 		<div class="form-group">
 			<div class="col-md-offset-2 col-md-10">
-				<input type="submit" value="Create" class="btn btn-default" />
+				<input type="submit" value="Finalizar" class="btn btn-info" />
 			</div>
 		</div>
 	</div>
-}
+
 <table class="table">
 	<tr>
 		<th>
@@ -65,8 +65,9 @@
 	{
 			<!---->
 		<tr>
-			<td>
-				@item.ProdutoId
+			<td name="ProdutoId">
+				<input type="text" hidden="hidden" name="ProdutoId" @item.ProdutoId />
+ 				@item.ProdutoId
 			</td>
 			<td>
 				@item.Descricao
@@ -91,5 +92,8 @@
 </table>
 
 <div>
-	@Html.ActionLink("Voltar para lista", "Listar", new { @class = "btn btn-primary small" })
+	@Html.ActionLink("Voltar para lista", "Listar", new { @class = "btn btn-info small" })
 </div>
+}
+
+<

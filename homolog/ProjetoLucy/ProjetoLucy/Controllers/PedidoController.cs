@@ -14,22 +14,23 @@ namespace ProjetoLucy.Controllers
 		protected PedidoServices _pedidoService;
 		protected ProdutoSevices _produtoService;
 
-		private readonly List<SelectListItem> _formPag = new List<SelectListItem> {
+		//private readonly List<SelectListItem> _formPag = new List<SelectListItem> {
 
-			new SelectListItem { Text = "Dinheiro" , Value = "Dinheiro"},
-			new SelectListItem { Text = "Crédito" , Value = "Credito"},
-			new SelectListItem { Text = "Débito", Value = "Debito"}
+		//	new SelectListItem { Text = "Dinheiro" , Value = "Dinheiro"},
+		//	new SelectListItem { Text = "Crédito" , Value = "Credito"},
+		//	new SelectListItem { Text = "Débito", Value = "Debito"}
 
-		};
+		//};
+
 		public PedidoController()
 		{
 			_pedidoService = new PedidoServices();
 			_produtoService = new ProdutoSevices();
 		}
-		// GET: Pedido
+		
 		public ActionResult Pedido()
         {			
-			ViewBag.List = _formPag.ToList();
+			
 			var lista = _produtoService.GetAll();
 			ViewBag.Pedido = lista;
 
@@ -37,7 +38,7 @@ namespace ProjetoLucy.Controllers
         }
 
 		[HttpPost]
-		public ActionResult Pedido(Pedido obj)
+		public ActionResult Pedido(Pedido obj, Produto prod)
 		{
 			if (obj.PedidoId > 0)
 			{				
@@ -45,13 +46,18 @@ namespace ProjetoLucy.Controllers
 			}
 			else
 			{
+				ItensPedido itensPedido = new ItensPedido();
+				
+
 				obj.Data_Pedido = DateTime.Now;
 				_pedidoService.Add(obj);
+				//itensPedido.PedidoId = obj.PedidoId;
+				
 			}
 
 			var lista = _pedidoService.GetAll();
 			ViewBag.Pedido = lista;
-			return View("Listar");
+			return RedirectToAction("Listar");
 		}
 
 		public ActionResult Listar()
