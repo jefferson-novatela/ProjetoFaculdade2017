@@ -36,14 +36,13 @@ namespace ProjetoLucy.Controllers
 
 		[HttpPost]
         public ActionResult Produto(Produto obj)
-        {
-			
+        {			
             if(obj.ProdutoId > 0)
             {
                _produtoSevices.Update(obj);
             }
 			else
-            {				
+            {
 				obj.CodProduto = obj.GerarCodigoProduto();
                 _produtoSevices.Add(obj);				
             }

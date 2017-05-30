@@ -20,8 +20,7 @@ namespace ProjetoLucy.Infra.Repository
 			catch (Exception e)
 			{
 				throw;
-			}
-			
+			}			
 		}
 
 		public bool UsuarioExistente(string email)

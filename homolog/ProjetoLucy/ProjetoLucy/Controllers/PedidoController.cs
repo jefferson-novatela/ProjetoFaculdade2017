@@ -1,5 +1,6 @@
 ﻿using ProjetoLucy.Domain.Entities;
 using ProjetoLucy.Infra.Repository;
+using ProjetoLucyServices.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,21 +11,23 @@ namespace ProjetoLucy.Controllers
 {
     public class PedidoController : Controller
     {
-		protected PedidoRepository _pedidoRepository;
+		protected PedidoServices _pedidoService;
 		private readonly List<SelectListItem> _formPag = new List<SelectListItem> {
 
 			new SelectListItem { Text = "Dinheiro" , Value = "Dinheiro"},
-			new SelectListItem { Text = "Crédito" , Value = "Credito"}
+			new SelectListItem { Text = "Crédito" , Value = "Credito"},
+			new SelectListItem { Text = "Débito", Value = "Debito"}
 
 		};
 		public PedidoController()
 		{
-			_pedidoRepository = new PedidoRepository();
+			_pedidoService = new PedidoServices();
 		}
 		// GET: Pedido
 		public ActionResult Pedido()
-        {
-			var lista = _pedidoRepository.GetAll();
+        {			
+			ViewBag.List = _formPag.ToList();
+			var lista = _pedidoService.GetAll();
 			ViewBag.Pedido = lista;
 
 			return View(new Pedido());
@@ -35,21 +38,21 @@ namespace ProjetoLucy.Controllers
 		{
 			if (obj.PedidoId > 0)
 			{				
-				_pedidoRepository.Update(obj);
+				_pedidoService.Update(obj);
 			}
 			else
 			{
-				_pedidoRepository.Add(obj);
+				_pedidoService.Add(obj);
 			}
 
-			var lista = _pedidoRepository.GetAll();
+			var lista = _pedidoService.GetAll();
 			ViewBag.Pedido = lista;
 			return View("Listar");
 		}
 
 		public ActionResult Listar()
 		{
-			var lista = _pedidoRepository.GetAll();
+			var lista = _pedidoService.GetAll();
 
 			return View(lista);
 		}
