@@ -5,7 +5,9 @@
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Pedido</h2>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 @using (Html.BeginForm())
 {
@@ -13,22 +15,15 @@
 
 	<div class="form-horizontal">
 		<h4>Pedido</h4>
-		<hr />
-		@Html.ValidationSummary(true, "", new { @class = "text-danger" })
-		<div class="form-group">
-			@Html.LabelFor(model => model.Data_Pedido, htmlAttributes: new { @class = "control-label col-md-2" })
-			<div class="col-md-10">
-				@Html.EditorFor(model => model.Data_Pedido, new { htmlAttributes = new { @class = "form-control" } })
-				@Html.ValidationMessageFor(model => model.Data_Pedido, "", new { @class = "text-danger" })
-			</div>
-		</div>
+		<hr />	
 
 		<div class="form-group">
-			@Html.LabelFor(model => model.Forma_pg, htmlAttributes: new { @class = "control-label col-md-2" })
-			<div class="col-md-10">
-				@Html.EditorFor(model => model.Forma_pg, new { htmlAttributes = new { @class = "form-control" } })
-				@Html.ValidationMessageFor(model => model.Forma_pg, "", new { @class = "text-danger" })
-			</div>
+			@Html.LabelFor(model => model.Forma_pg, htmlAttributes: new { @class = "control-label col-md-2" })		
+				<div class="col-md-10">
+					<input type="radio" value="1" name="Forma_pg" checked="@(Model.Forma_pg == "1")"/> Dinherio <br />
+					<input type="radio" value="2" name="Forma_pg" checked="@(Model.Forma_pg == "2")"/> Credito  <br />
+					<input type="radio" value="3" name="Forma_pg" checked="@(Model.Forma_pg == "3")"/> Debito   <br />
+				</div>					
 		</div>
 
 		<div class="form-group">
@@ -48,59 +43,53 @@
 <table class="table">
 	<tr>
 		<th>
-			@Html.DisplayNameFor(model => model.NumeroPedido)
+			Numero Produto
 		</th>
 		<th>
-			@Html.DisplayNameFor(model => model.DescricaoPed)
+			Descrição
+		</th>		
+		<th>
+			Quantidade estoque
 		</th>
 		<th>
-			@Html.DisplayNameFor(model => model.Data_Pedido)
+			Valor Unitario
+		</th>		
+		<th>
+			Selecionar
 		</th>
 		<th>
-			@Html.DisplayNameFor(model => model.Qtd)
+			Quantidade
 		</th>
-		<th>
-			@Html.DisplayNameFor(model => model.Total)
-		</th>
-		<th></th>
 	</tr>
 	@foreach (var item in ViewBag.Pedido)
 	{
 			<!---->
 		<tr>
 			<td>
-				@item.NumeroPedido
+				@item.ProdutoId
 			</td>
 			<td>
-				@item.DescricaoPed
+				@item.Descricao
+			</td>			
+			<td>
+				@item.Quantidade
 			</td>
 			<td>
-				@item.Data_Pedido
-			</td>
+				@item.VlrProduto
+			</td>	
 			<td>
-				@item.Qtd
-			</td>
+				<div class="checkbox">
+					<input type="checkbox" />
+				</div>
+			</td>	
 			<td>
-				@item.Total
-			</td>
-
-			@*<td>
-					@Html.ActionLink("Edit", "Edit", new { id=item.PedidoId }) |
-					@Html.ActionLink("Details", "Details", new { id=item.PedidoId }) |
-					@Html.ActionLink("Delete", "Delete", new { id=item.PedidoId })
-				</td>*@
+				<input type="number" placeholder="Quantidade" name="Qtd" value="@Model.Qtd"/>
+			</td>	
 		</tr>
 	}
 
 </table>
 
-<div class="form-group">
-	@Html.LabelFor(model => model.Forma_pg, htmlAttributes: new { @class = "control-label col-md-2" })
-	<div class="col-md-10">
-		@Html.EditorFor(model => model.Forma_pg, new { htmlAttributes = new { @class = "form-control" } })
-		@Html.ValidationMessageFor(model => model.Forma_pg, "", new { @class = "text-danger" })
-	</div>
-</div>
 <div>
-	@Html.ActionLink("Voltar para lista", "Listar", new { @class = "btn btn-sucesse"})
+	@Html.ActionLink("Voltar para lista", "Listar", new { @class = "btn btn-primary small" })
 </div>

@@ -30,7 +30,7 @@ namespace ProjetoLucy
                       "~/Content/site.css"));
 
 
-			bundles.Add(new StyleBundle("~/bundle/jquery").Include());
+			//bundles.Add(new StyleBundle("~/bundle/jquery").Include());
 
 			bundles.Add(new StyleBundle("~/bundles/Scripts/ControleProduto").Include(
 					"~/Scripts/ScriptFormularios/Produto/Controle/Produto.js"

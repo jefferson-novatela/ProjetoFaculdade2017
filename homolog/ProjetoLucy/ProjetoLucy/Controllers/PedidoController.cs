@@ -12,6 +12,8 @@ namespace ProjetoLucy.Controllers
     public class PedidoController : Controller
     {
 		protected PedidoServices _pedidoService;
+		protected ProdutoSevices _produtoService;
+
 		private readonly List<SelectListItem> _formPag = new List<SelectListItem> {
 
 			new SelectListItem { Text = "Dinheiro" , Value = "Dinheiro"},
@@ -22,12 +24,13 @@ namespace ProjetoLucy.Controllers
 		public PedidoController()
 		{
 			_pedidoService = new PedidoServices();
+			_produtoService = new ProdutoSevices();
 		}
 		// GET: Pedido
 		public ActionResult Pedido()
         {			
 			ViewBag.List = _formPag.ToList();
-			var lista = _pedidoService.GetAll();
+			var lista = _produtoService.GetAll();
 			ViewBag.Pedido = lista;
 
 			return View(new Pedido());
@@ -42,6 +45,7 @@ namespace ProjetoLucy.Controllers
 			}
 			else
 			{
+				obj.Data_Pedido = DateTime.Now;
 				_pedidoService.Add(obj);
 			}
 
